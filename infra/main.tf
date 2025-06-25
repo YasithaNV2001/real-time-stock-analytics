@@ -1,7 +1,9 @@
 provider "azurerm" {
   features {}
 
+
   subscription_id = "a6312f7c-2f83-4842-a746-ba69d7608e6c"
+
 }
 
 resource "azurerm_resource_group" "rg" {
@@ -33,3 +35,13 @@ resource "azurerm_storage_account" "adls" {
   account_replication_type = "LRS"
   is_hns_enabled           = true  # Required for ADLS Gen2
 }
+
+
+
+resource "azurerm_storage_container" "output" {
+  name                  = "output"
+  storage_account_name  = azurerm_storage_account.adls.name
+  container_access_type = "private"
+}
+
+
