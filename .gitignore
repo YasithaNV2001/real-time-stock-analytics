@@ -20,15 +20,3 @@ __pycache__/
 *.pyd
 *.log
 
-# -----------------------------
-# Data Simulation Outputs (if you generate any CSV or JSON later)
-# -----------------------------
-data-simulation/*.csv
-data-simulation/*.json
-
-# -----------------------------
-# VSCode & OS-specific
-# -----------------------------
-.vscode/
-.DS_Store
-Thumbs.db
