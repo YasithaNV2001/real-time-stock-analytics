@@ -1,0 +1,21 @@
+{
+    "Name": "stockinput",
+    "Type": "Data Stream",
+    "DataSourceType": "Event Hub",
+    "EventHubProperties": {
+        "ServiceBusNamespace": "rtstocknamespace",
+        "EventHubName": "rtstockhub",
+        "SharedAccessPolicyName": null,
+        "SharedAccessPolicyKey": null,
+        "ConsumerGroupName": "rt-stock-sa-job_stockinput_consumer_group",
+        "AuthenticationMode": "Msi"
+    },
+    "DataSourceCredentialDomain": null,
+    "Serialization": {
+        "Type": "Json",
+        "Encoding": "UTF8"
+    },
+    "PartitionKey": "",
+    "CompressionType": "None",
+    "ScriptType": "Input"
+}
