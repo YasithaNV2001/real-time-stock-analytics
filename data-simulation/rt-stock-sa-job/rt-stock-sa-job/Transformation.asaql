@@ -1,0 +1,12 @@
+SELECT
+    Symbol,
+    AVG(CAST(Price AS float)) OVER (LIMIT DURATION(second, 30)) AS AvgPrice,
+    MAX(CAST(Price AS float)) AS MaxPrice,
+    MIN(CAST(Price AS float)) AS MinPrice,
+    System.Timestamp AS EventTime
+INTO
+    stockoutput
+FROM
+    stockinput
+TIMESTAMP BY EventTime
+GROUP BY Symbol, TumblingWindow(second, 30)
