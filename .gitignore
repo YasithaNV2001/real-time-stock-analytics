@@ -192,3 +192,17 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Terraform generated files
+.terraform/
+*.tfstate
+*.tfstate.*
+*.backup
+*.tfplan
+crash.log
+
+# Terraform secrets file (optional if used)
+terraform.tfvars
+
+# Python environment
+.venv/
