@@ -4,6 +4,7 @@ This project showcases a complete real-time data pipeline using **Azure Event Hu
 
 ## 🚀 Architecture Overview
 
+![Data Engineering Architecture](architecture.png)
 Stock Data Simulator → Event Hub → Stream Analytics Job → Power BI Dashboard
 
 ## 📂 Folder Structure
